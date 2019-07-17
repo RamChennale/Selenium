@@ -1,0 +1,72 @@
+
+1.	Static wait and
+2.	Dynamic wait	
+
+1 .Static wait: Thread sleep wait
+Thread.sleep(10000);
+
+2.  Dynamic wait (implicit and explicit wait)	
+2.1 Page load time out
+driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+
+2.2. Implicit wait
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+2.3 Explicit wait
+WebDriverWait webDriverWait11 = new WebDriverWait(driver, 30);
+	webDriverWait11.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("id")))).click();
+
+2.4polling wait
+WebDriverWait wait22= new WebDriverWait(driver, 10);
+wait22.pollingEvery(2, TimeUnit.SECONDS);
+wait22.until(ExpectedConditions.visibilityOf(driver.findElement(By.id(""))));
+
+2.5. Fluent wait
+Wait<WebDriver> wait2 = new FluentWait<WebDriver>(driver).
+	withTimeout(30, TimeUnit.SECONDS).
+	pollingEvery(2, TimeUnit.SECONDS).
+	ignoring(NoSuchElementException.class);
+WebElement userName = wait2.until(new Function<WebDriver, WebElement>() {
+			@Override
+			public WebElement apply(WebDriver driver) {
+				return driver.findElement(By.id("id"));
+			}
+		});
+		
+		
+
+
+1 .Static wait: Thread sleep wait
+Thread.sleep(10000);
+Here irrespective of any condition the page will be wait for 10 seconds even after completion of all actions.
+
+2.  Dynamic wait (implicit and explicit wait)	
+2.1 Page load time out
+driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+
+This wait to waiting to load the complete page for 10 seconds before 10 second if page loads then next actions will be continued else after 10 sec throws TimeOutException 
+
+2.2. Implicit wait
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+Implicit wait- Dynamic in nature
+-It can be changed anywhere anytime in our code ie we can override and the latest value applied
+Implicit wait- is always applied globally which directly applied to driver where it is available for all web element on a page.
+
+2.3 Explicit wait
+WebDriverWait webDriverWait11 = new WebDriverWait(driver, 30);
+	webDriverWait11.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("id")))).click();
+
+Explicit wait:
+1.	Explicit wait- also dynamic nature
+2.	No explicit keyword or method
+3.	Available with WebDriverWait class 
+4.	Applied for specific element with some specific expected condition
+5.	Never use implicit and explicit wait together :  Because selenium WD will wait for the element first  because of IMLICIT wait and then EXPLICIT wait both will be applied hence total synchronization wait will be increased for each element. 
+
+Do we need to have implicit and explicit wait together ?
+No, It’s not at all recommended to use it both together, because when we apply Implicit wait- this will always applied globally which directly applied to a driver where it is available for all web element with respective to driver.
+So when we apply both together then first implicitly wait applied to element and again explicit wait applied to same element .
+
+Can we override Imlicit wait ?
+Yes, the latest last applied Implicit wait value will be considered.
