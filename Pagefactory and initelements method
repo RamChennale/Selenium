@@ -2,8 +2,7 @@ Explain “initelements(driver, assetcataddlocators.class)” method of pagefact
  
 Note: 
 Here's what happens: When you call initElements, the PageObjectFactory scans your PageObject for fields of the type WebElement. 
-For each WebElement field that your page object has, 
-it creates a proxy object. 
+For each WebElement field that your page object has, it creates a proxy object. 
 That proxy object stores the locator of the WebElement (the value of the @FindBy annotation).
 The proxy is then assigned to the field.
 Later, when your code actually accesses the field, instead of a WebElement object, you retrieve the proxy. 
@@ -12,29 +11,39 @@ Now the proxy actually tries to locate that locator on the current page, and ret
 
 
 AssetCatADDLocators category = PageFactory.initElements(driver, AssetCatADDLocators.class);
-
+=>
 <AssetCatADDLocators> AssetCatADDLocators obj= PageFactory.initElements(WebDriver driver, Class<AssetCatADDLocators> pageClassToProxy)
 
-Instantiate an instance of the given class and set a lazy proxy for each of the WebElement and List<WebElement> fields that have been declared assuming that the field name is also the HTML element's "id" or "name". 
-This means that for the class: [Class<AssetCatADDLocators> pageClassToProxy] public class Page { private WebElement submit; } there will be an element that can be located using the xpath expression "//*[@id='submit']" or "//*[@name='submit']" By default, the element or the list is looked up each and every time a method is called upon it. To change this behaviour, simply annotate the field with the CacheLookup. 
-To change how the element is located use the FindBy annotation. This method will attempt to instantiate the class given to it, preferably using a constructor which takes a WebDriver instance as its only argument or falling back on a no-arg constructor. An exception will be thrown if the class cannot be instantiated. 
+Instantiate an instance of the given class and set a lazy proxy for each of the WebElement and List<WebElement> fields that have been 
+declared assuming that the field name is also the HTML element's "id" or "name". 
+This means that for the class: [Class<AssetCatADDLocators> pageClassToProxy] public class Page { private WebElement submit; } 
+there will be an element that can be located using the xpath expression "//*[@id='submit']" or "//*[@name='submit']" 
+By default, the element or the list is looked up each and every time a method is called upon it. To change this behaviour, 
+simply annotate the field with the CacheLookup. 
+
+To change how the element is located use the FindBy annotation. This method will attempt to instantiate the class given to it, 
+preferably using a constructor which takes a WebDriver instance as its only argument or falling back on a no-arg constructor. 
+An exception will be thrown if the class cannot be instantiated. 
+
 Type Parameters: 
 <T> Class of the PageObject 
+
 Parameters: 
 driver The driver that will be used to look up the elements 
 pageClassToProxy A class which will be initialised. 
+
 Returns: 
 An instantiated instance of the class with WebElement and List<WebElement> fields proxied 
 
 
-See Also: 
-FindBy 
-CacheLookup
-1.	Explain “FindBy ” annotation ?
+1.	Explain “FindBy ” annotation ? 
 org.openqa.selenium.support.FindBy
 Used to mark a field on a Page Object to indicate an alternative mechanism for locating the WebElement or a list of WebElements.
-Used in conjunction with org.openqa.selenium.support.PageFactory this allows users to quickly and easily create PageObjects. It can be used on a types as well but will not be processed by default. 
-You can either use this annotation by specifying both "how" and "using" or by specifying one of the location strategies (e.g.: "id") with an appropriate value to use. Both options will delegate down to the matching org.openqa.selenium.By methods in By class. For example, these two annotations point to the same element: 
+Used in conjunction with org.openqa.selenium.support.PageFactory this allows users to quickly and easily create PageObjects. 
+It can be used on a types as well but will not be processed by default. 
+You can either use this annotation by specifying both "how" and "using" or by specifying one of the location strategies (e.g.: "id") 
+with an appropriate value to use. Both options will delegate down to the matching org.openqa.selenium.By methods in By class.
+For example, these two annotations point to the same element: 
 @FindBy(id = "foobar") WebElement foobar;
 @FindBy(how = How.ID, using = "foobar") WebElement foobar;
 
@@ -44,6 +53,7 @@ and these two annotations point to the same list of elements:
 
 2.	Explain “CacheLookup” annotation ?
 org.openqa.selenium.support.CacheLookup
-Marker annotation to be applied to WebElements to indicate that it never changes (that is, that the same instance in the DOM will always be used)
+Marker annotation to be applied to WebElements to indicate that it never changes (that is, that the same instance in the DOM will 
+always be used)
 
 
