@@ -1,0 +1,32 @@
+What is Defect/Bug?
+A defect is an error or a bug, in the application which is created. A programmer while designing and building the software can make mistakes or error. These mistakes or errors mean that there are flaws in the software. These are called defects.
+ 
+What is Defect Life Cycle?
+Defect life cycle, also known as Bug Life cycle is the journey of a defect cycle, which a defect goes through during its lifetime. It varies from organization to organization and also from project to project as it is governed by the software testing process and also depends upon the tools used.
+ 
+Defect Life Cycle includes following stages:
+
+Status	Explanation
+New	When a defect is posted, the default status is 'New'
+Open	When the defect is accepted by developers it is moved to 'Open' Status
+Rejected	When the defect is rejected by developers it is moved to 'Rejected' Status
+Fixed	When the defect is fixed by developers it is moved to 'Fixed' Status. Testers would pick up all defects for Testing that are in status 'Fixed'.
+Reopen	If the testing has failed, the defect is moved to 'Reopen' status
+Closed	If the testing has passed, the defect is moved to 'Closed' Status.
+ 
+ MORE DETAILS
+
+New: When a defect is logged and posted for the first time. Its state is given as new.
+Assigned: Once the bug is posted by the tester, the lead of the tester approves the bug and assigns the bug to developer team. There can be two scenario, first that the defect can directly assign to the developer, who owns the functionality of the defect. Second, it can also be assigned to the Dev Lead and once it is approved with the Dev Lead, he or she can further move the defect to the developer.
+Open: Its state when the developer starts analyzing and working on the defect fix.
+Fixed: When developer makes necessary code changes and verifies the changes then he/she can make bug status as ‘Fixed’. This is also an indication to the Dev Lead that the defects on Fixed status are the defect which will be available to tester to test in the coming build.
+Retest: At this stage the tester do the retesting of the changed code which developer has given to him to check whether the defect got fixed or not.
+Once the latest build is pushed to the environment, Dev lead move all the Fixed defects to Retest. It is an indication to the testing team that the defects are ready to test. 
+Reopened:  If the bug still exists even after the bug is fixed by the developer, the tester changes the status to “reopened”. The bug goes through the life cycle once again.
+Deferred: The bug, changed to deferred state means the bug is expected to be fixed in next releases. The reasons for changing the bug to this state have many factors. Some of them are priority of the bug may be low, lack of time for the release or the bug may not have major effect on the software.
+Rejected: If the developer feels that the bug is not genuine, developer rejects the bug. Then the state of the bug is changed to “rejected”.
+Duplicate : If the bug is repeated twice or the two bugs mention the same concept of the bug, then the recent/latest bug status is changed to “duplicate“.
+Closed:  Once the bug is fixed, it is tested by the tester. If the tester feels that the bug no longer exists in the software, tester changes the status of the bug to “closed”. This state means that the bug is fixed, tested and approved.
+ 
+ 
+
