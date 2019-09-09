@@ -1,0 +1,27 @@
+Selenium is a suite of tools. It consists of Selenium IDE, Selenium RC, Selenium Web driver, and Selenium Grid
+
+1.	Selenium IDE:
+Selenium IDE (Integrated Development Environment) is a Firefox plug-in. It is the simplest framework in the Selenium Suite. 
+It allows us to record and playback the scripts. Even though we can create scripts using Selenium IDE, we need to use Selenium RC or 
+Selenium WebDriver to write more advanced and robust test cases.
+
+2.	Selenium RC:
+Selenium RC/Selenium 1. Selenium RC was the main Selenium project for a long time before the WebDriver merge brought up Selenium 2. 
+Selenium 1 is still actively supported (in maintenance mode). It relies on JavaScript for automation. It supports Java, JavaScript, Ruby, 
+PHP, Python, Perl and C# . It supports almost every browser out there.
+Note: Selenium RC is officially deprecated.
+
+3.	Selenium WebDriver:
+Selenium WebDriver is a browser automation framework that accepts commands and sends them to a browser. It is implemented through a 
+browser-specific driver. It controls the browser by directly communicating with it. Selenium WebDriver supports Java, C#, PHP, Python, 
+Perl, Ruby.
+Operation System Support – Windows, Mac OS, Linux, Solaris
+Browser Support – Mozilla Firefox, Internet Explorer, Google Chrome 12.0.712.0 and above, Safari, Opera 11.5 and above, Android, iOS, HtmlUnit 2.9 and above
+
+4.	Selenium Grid:
+Selenium Grid is a tool used together with Selenium RC to run tests on different machines against different browsers in parallel. That is, 
+running multiple tests at the same time against different machines running different browsers and operating systems.
+
+Selenium Web Driver is a well designed object oriented API supports many languages such as Java, C#, Python etc. 
+Let’s see what is API and then we move on to know the complete picture of Selenium WebDriver Architecture.
+
