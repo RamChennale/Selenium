@@ -7,18 +7,13 @@ WebElement locator=driver.findElement(By.id("id"));
 2.	locator.sendKeys(Keys.ENTER);
 3.	locator.sendKeys(Keys.RETURN);
 4.	JavascriptExecutor  javascriptExecutor = (JavascriptExecutor)driver; 
-javascriptExecutor .executeScript("arguments[0].click()", locator);
+		javascriptExecutor.executeScript("arguments[0].click()", locator);
 5.	Actions actions= new Actions(driver);
 		5.1 actions.click(locator).perform(); //OR actions.click(locator).build().perform();
-	              5.2 actions.clickAndHold(locator).release().build().perform(); //actions.clickAndHold(locator).release().perform(); also works
+	    5.2 actions.clickAndHold(locator).release().build().perform(); //actions.clickAndHold(locator).release().perform(); also works
 		5.3 actions.sendKeys(locator, Keys.RETURN).build().perform(); //actions.sendKeys(locator, Keys.RETURN).perform();also works
 
 Note: actions.click(); Clicks at the current mouse location.
-
-
-
-
-
 
 
 import org.openqa.selenium.By;
@@ -55,6 +50,7 @@ public class ClickInSelenium extends BaseClass{
 			form=driver.findElement(By.partialLinkText("Form"));
 			form.click();
 			Thread.sleep(2000);
+			//scrolling page using javascript
 			JavascriptExecutor javascriptExecutor=(JavascriptExecutor)driver;
 			javascriptExecutor.executeScript("window.scrollBy(0,400);", "");
 			formSubmit=driver.findElement(By.xpath("//button[text()='Submit']"));
@@ -97,31 +93,10 @@ public class ClickInSelenium extends BaseClass{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Direct method from the API which is recommended always
 1.	signOnImage.click();
 
 2.	signOnImage.sendKeys(Keys.RETURN) or signOnImage.sendKeys(Keys.ENTER) 
-
 
 3.	Javascript Executor:
 ((JavascriptExecutor) driver).executeScript("arguments[0].click();", yourelement);
