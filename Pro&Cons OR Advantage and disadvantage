@@ -1,0 +1,23 @@
+Pro/Advantage
+1. Selenium is Open source; which is purely available in the form of API
+2. Supports multiple programming language java, python, php, perl, ruby, javascript
+3. Its platform independent supports multiple OS windows, mac, linus, unix
+4. Cross browser testing chrome, firefox, opera, IE and Safari.
+5. Headless browser phantom js, HTMLUnitDriver, chrome headless
+6. Easily integrated with open source tools TestNG, cucumber, Jbehave, BDD framework
+7. Light weight because available in API form
+8. Easily integrated with CI tool Jenkins and build generation Maven 
+9. Can be executed on local as well as cloud/vm/server
+10. Customize web driver codebase source code will be shared 
+11. Wrappers: lot of third party tools can be used with it Appium (mobile application), Protrctor(Angular application), Watir, Robot (python). 
+
+Cons/disadvantage
+1. Open source- so there is no direct support.
+2. No barcode/captch reading cannot be automated.
+3. Need to learn programming – no script less or codeless facility
+4. No desktop application automation or windows based application only web based browser automation. 
+5. No reports for test result.
+6. For any extra work: TC design, build generation, report generation, CI need to use third party tools selenium dose not supports on its own.
+
+
+
