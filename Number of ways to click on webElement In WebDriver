@@ -1,0 +1,179 @@
+Number of ways to click on webElement In WebDriver?
+
+WebElement locator=driver.findElement(By.id("id"));
+
+
+1.	locator.click();
+2.	locator.sendKeys(Keys.ENTER);
+3.	locator.sendKeys(Keys.RETURN);
+4.	JavascriptExecutor  javascriptExecutor = (JavascriptExecutor)driver; 
+javascriptExecutor .executeScript("arguments[0].click()", locator);
+5.	Actions actions= new Actions(driver);
+		5.1 actions.click(locator).perform(); //OR actions.click(locator).build().perform();
+	              5.2 actions.clickAndHold(locator).release().build().perform(); //actions.clickAndHold(locator).release().perform(); also works
+		5.3 actions.sendKeys(locator, Keys.RETURN).build().perform(); //actions.sendKeys(locator, Keys.RETURN).perform();also works
+
+Note: actions.click(); Clicks at the current mouse location.
+
+
+
+
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+public class ClickInSelenium extends BaseClass{
+	
+	WebElement form;
+	WebElement home;
+	WebElement ajaxControl;
+	WebElement widgets;
+	WebElement select;
+	WebElement formSubmit;
+	
+	@Test(enabled=false)
+	private void numOfWayClickingWaySelenium() {
+		WebElement locator=driver.findElement(By.id("id"));
+		locator.click();
+		locator.sendKeys(Keys.ENTER);
+		locator.sendKeys(Keys.RETURN);
+		((JavascriptExecutor)driver).executeScript("arguments[0].click()", locator);
+		Actions actions= new Actions(driver);
+		actions.click(locator).perform();
+		actions.moveToElement(locator).perform();
+		actions.clickAndHold(locator).release().perform();
+		actions.sendKeys(locator, Keys.RETURN).perform();
+	}
+	@Test
+	public void submitAndClickAreDiff()throws InterruptedException {
+			form=driver.findElement(By.partialLinkText("Form"));
+			form.click();
+			Thread.sleep(2000);
+			JavascriptExecutor javascriptExecutor=(JavascriptExecutor)driver;
+			javascriptExecutor.executeScript("window.scrollBy(0,400);", "");
+			formSubmit=driver.findElement(By.xpath("//button[text()='Submit']"));
+			Thread.sleep(1000);
+			formSubmit.submit();
+	}
+	/*
+	@Test
+	public void numOfClickingWaySelenium() throws InterruptedException{
+		form=driver.findElement(By.partialLinkText("Form"));
+		form.submit();
+		Thread.sleep(1000);
+		home=driver.findElement(By.linkText("Home"));
+		home.sendKeys(Keys.RETURN);
+		Thread.sleep(1000);
+		ajaxControl=driver.findElement(By.xpath("//*[text()='AjaxCall']"));
+		ajaxControl.sendKeys(Keys.ENTER);
+		Thread.sleep(1000);
+		widgets= driver.findElement(By.xpath("//*[text()='Widgets']"));
+		JavascriptExecutor javascriptExecutor= (JavascriptExecutor)driver;
+		javascriptExecutor.executeScript("arguments[0].click();",widgets);
+		Thread.sleep(1000); 
+
+		//Click by Action class 
+		Actions actions= new  Actions(driver);
+		select= driver.findElement(By.xpath("//*[text()='Select']"));
+		//actions.click(); Clicks at the current mouse location.
+		Thread.sleep(1000);
+		actions.click(home).perform(); //correct and valid
+		Thread.sleep(1000);
+		actions.moveToElement(home).click().perform();//correct and valid
+		Thread.sleep(1000);
+		actions.clickAndHold(home).release().perform();//correct and valid
+		Thread.sleep(1000);
+		actions.sendKeys(home, Keys.RETURN).perform();
+		Thread.sleep(1000);
+		}*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Direct method from the API which is recommended always
+1.	signOnImage.click();
+
+2.	signOnImage.sendKeys(Keys.RETURN) or signOnImage.sendKeys(Keys.ENTER) 
+
+
+3.	Javascript Executor:
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", yourelement);
+or by using Javascript Library:
+JavascriptLibrary jsLib = new JavascriptLibrary();`
+jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", we, "click", "0,0");
+
+
+driver.get("http://newtours.demoaut.com");
+    WebElement signOnImage = driver.findElement(By.xpath("//input[@type='image'][@name='login']"));
+
+// direct method from the API which is recommended always
+    signOnImage.click(); 
+
+yourelement.sendKeys(Keys.RETURN) or .sendKeys(Keys.ENTER) : which is an equivalent of focusing that element and hitting RETURN/ENTER on that element
+Also, There are methods to do this using Javacript but it is not usually recommended:
+using the non-native Javascript Executor:
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", yourelement);
+or by using Javascript Library:
+JavascriptLibrary jsLib = new JavascriptLibrary();`
+jsLib.callEmbeddedSelenium(driver, "triggerMouseEventAt", we, "click", "0,0");
+
+
+
+Below are some methods that will be useful to click a button/Image.
+WebDriver driver = new ChromeDriver();
+    driver.get("http://newtours.demoaut.com");
+    WebElement signOnImage = driver.findElement(By.xpath("//input[@type='image'][@name='login']"));
+
+// direct method from the API which is recommended always
+    signOnImage.click(); 
+1 Using Return Key
+    signOnImage.sendKeys(Keys.RETURN); 
+2 Using JavascriptExecutor
+2.1 
+    JavascriptExecutor js = (JavascriptExecutor)driver; 
+    js.executeScript("arguments[0].click();", signOnImage);
+
+2.2         
+    JavascriptExecutor js = (JavascriptExecutor) driver; 
+    js.executeScript("document.getElementsByName('login')[0].click()");
+3 Using Actions class
+3.1
+    Actions actions = new Actions(driver);  
+    actions.click(signOnImage).perform();
+3.2
+    Actions actions = new Actions(driver);
+    actions.moveToElement(signOnImage).click().perform();
+3.3 
+    Actions actions = new Actions(driver); 
+    actions.clickAndHold(signOnImage).release().perform();
+3.4 
+    Actions actions = new Actions(driver);
+    actions.sendKeys(signOnImage, Keys.RETURN).perform();
+
