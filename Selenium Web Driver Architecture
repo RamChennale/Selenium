@@ -1,0 +1,108 @@
+Selenium Web Driver Architecture:
+
+Architecture of Selenium Web Driver is all about how Selenium works internally. We know Selenium is a browser automation tool which
+interacts with browser and automate end to end tests of a web application.
+
+WebDriver driver = new FirefoxDriver();
+
+API: 
+Application Programming Interface (API) works as an interface between various software components.
+
+Selenium Web Driver API:
+Selenium Web driver API helps in communication between languages and browser. Selenium supports many programming languages such as Java,
+.net, Python, C#,  PHP etc., and also it supports multiple browsers such as Google Chrome, Firefox, Internet Explorer etc.,
+Every browser has different logic of performing actions like loading a page, closing the browser etc.
+
+Selenium Web Driver Framework Architecture Diagram: IMAGE not displaying.
+
+Selenium Web Driver Architecture have four components:
+
+1.	Selenium Client Library/Language Bindings
+2.	JSON Wire Protocol over HTTP
+3.	Browser Drivers
+4.	Real Browsers
+
+1.	Selenium Client Libraries/Language Bindings:
+Selenium supports multiple libraries such as Java, .net, Python, C#,  PHP etc. Selenium Developers have developed language bindings to 
+allow Selenium to support multiple languages. 
+
+2.	JSON WIRE PROTOCOL Over HTTP Client:
+JSON (JavaScript Object Notation) it is used to transfer data between a client and a server on the web. 
+JSON Wire Protocol is a REST API that transfers the information between HTTP servers. Each Browser Driver (such as Firefox Driver, Chrome
+Driver etc.) has its own HTTP server.
+Having all the details in JSON payload session as OS name, JavaScript enabled, TakeScreenShot true, machine name etc shown in below box
+
+JSON payload session
+{
+  "a": {
+    "mobileEmulationEnabled": false,
+    "hasTouchScreen": true,
+    "platform": "XP",
+    "acceptSslCerts": false,
+    "goog:chromeOptions": {
+      "debuggerAddress": "localhost:3948"
+    },
+    "acceptInsecureCerts": false,
+    "webStorageEnabled": true,
+    "browserName": "chrome",
+    "takesScreenshot": true,
+    "javascriptEnabled": true,
+    "setWindowRect": true,
+    "unexpectedAlertBehaviour": "ignore",
+    "applicationCacheEnabled": false,
+    "rotatable": false,
+    "networkConnectionEnabled": false,
+    "chrome": {
+      "chromedriverVersion": "2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90)",
+      "userDataDir": "C:\\Users\\RAMCHE~1\\AppData\\Local\\Temp\\scoped_dir5568_21073"
+    },
+    "takesHeapSnapshot": true,
+    "pageLoadStrategy": "normal",
+    "databaseEnabled": false,
+    "handlesAlerts": true,
+    "version": "72.0.3626.121",
+    "browserConnectionEnabled": false,
+    "nativeEvents": true,
+    "webdriver.remote.sessionid": "acc41048-38d5-4c22-b6f4-9b41ca141727",
+    "locationContextEnabled": true,
+    "cssSelectorsEnabled": true
+  }
+}
+
+3.	Browser Drivers:
+Each browser contains separate browser driver. Browser drivers communicate with respective browser without revealing the internal logic
+of browser’s functionality. When a browser driver is received any command then that command will be executed on the respective browser 
+and the response will go back in the form of HTTP response.
+
+4.	Browsers:
+Selenium supports multiple browsers such as Firefox, Chrome, IE, Safari etc.,
+
+
+
+Let’s see how Selenium WebDriver works internally
+
+1. Selenium client libraries (say Java)
+In real time, you write a code in your UI (say Eclipse IDE) using any one of the supported Selenium client libraries (say Java).
+
+Example:
+WebDriver driver = new FirefoxDriver();
+driver.get(“https://www.softwaretestingmaterial.com”)
+
+Once you are ready with your script, you will click on Run to execute the program. Based on the above statements, Firefox browser will be
+launched and it will navigate to softwartestingmaterial website.
+Here we see what will happen internally after you click on Run till the launch of Firefox browser.
+
+2. JSON Wire Protocol over HTTP
+Once you click on Run, every statement in your script will be converted as a URL with the help of JSON Wire Protocol over HTTP. 
+The URL’s will be passed to the Browser Drivers. (In the above code, we took Firefox Driver). Here in our case the client library (java)
+will convert the statements of the script to JSON format and communicates with the FirefoxDriver. URL looks as shown below.
+
+http://localhost:8080/{"url":"https://www.softwaretestingmaterial.com"}
+
+3. Browser Driver
+Every Browser Driver uses a HTTP server to receive HTTP requests.  
+
+4. Browser Driver and Real Browser
+Once the URL reaches the Browser Driver then the Browser Driver will pass that request to the real browser over HTTP. Then the commands 
+in your selenium script will be executed on the browser.
+If the request is POST request then there will be an action on browser
