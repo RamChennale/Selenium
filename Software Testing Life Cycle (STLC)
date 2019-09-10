@@ -1,0 +1,111 @@
+What is Software Testing Life Cycle (STLC)
+Software Testing Life Cycle (STLC) is defined as a sequence of activities conducted to perform Software Testing. It consists of a series
+of activities carried out methodologically to help certify your software product.
+  1. Requirement Analysis ->
+  2. Test Planning -> 
+  3. Test case development ->
+  4. Test Environment setup -> 
+  5. Test Execution ->
+  6. Test Cycle closure
+
+Different Phases of the STLC Model
+ STLC Diagram
+Below are the phases of STLC:
+1.	Requirement Analysis
+2.	Test Planning
+3.	Test case development
+4.	Test Environment setup
+5.	Test Execution
+6.	Test Cycle closure
+
+1. Requirement Analysis
+During this phase test team studies the requirements from a testing point of view to identify the testable requirements. The QA team may
+interact with various stakeholders (Client, Business Analyst, Technical Leads and System Architects etc) to understand the requirements
+in detail.Requirements could be either Functional (defining what the software must do) or Non Functional (defining system performance 
+/security availability)
+
+Activities
+  •	Identify types of tests to be performed. 
+  •	Gather details about testing priorities and focus.
+  •	Prepare Requirement Traceability Matrix (RTM).
+  •	Identify test environment details where testing is supposed to be carried out. 
+  •	Automation feasibility analysis (if required).
+Deliverables
+  • RTM
+  •	Automation feasibility report. (if applicable)
+
+2. Test Planning
+In this stage, a Senior QA, manager will determine effort and cost estimates for the project and would prepare and finalize the Test 
+Plan. In this phase, Test Strategy is also determined.
+
+Activities
+  •	Preparation of test plan/strategy document for various types of testing
+  •	Test tool selection 
+  •	Test effort estimation 
+  •	Resource planning and determining roles and responsibilities.
+  •	Training requirement
+
+Deliverables 
+  •	Test plan /strategy document.
+  •	Effort estimation document.
+
+3. Test Case Development
+This phase involves the creation, verification and rework of test cases & test scripts. Test data, is identified/created and is reviewed
+and then reworked as well.
+
+Activities
+  •	Create test cases, automation scripts (if applicable)
+  •	Review and baseline test cases and scripts 
+  •	Create test data (If Test Environment is available)
+
+Deliverables 
+  •	Test cases/scripts 
+  • Test data
+
+4. Test Environment Setup
+Test environment decides the software and hardware conditions under which a work product is going to be tested. Test environment set-up 
+is one of the critical aspects of testing process and can be done in parallel with Test Case Development Stage. Test team may not be 
+involved in this activity if the customer/development team provides the test environment in which case the test team is required to do 
+a readiness check (smoke testing) of the given environment.
+
+Activities 
+  •	Understand the required architecture, environment set-up and prepare hardware and software requirement list for the Test Environment.
+  •	Setup test Environment and test data 
+  •	Perform smoke test on the build
+
+Deliverables 
+  •	Environment ready with test data set up 
+  •	Smoke Test Results.
+
+5. Test Execution
+During this phase, the testers will carry out the testing as per the test plans and the prepared test cases. Bugs will be reported back 
+to the development team for correction and retesting will be performed.
+
+Activities
+  •	Execute test cases as per test plan doc.
+  •	Document test results, and log defects for failed cases 
+  •	Map defects to test cases in RTM 
+  •	Retest the Defect fixes 
+  •	Track the defects to closure
+  
+Deliverables 
+  •	Completed RTM with the execution status
+  •	Test cases updated with results
+  •	Defect reports
+
+6. Test Cycle Closure
+Testing team will meet, discuss and analyze testing artifacts to identify strategies that have to be implemented in the future taking 
+lessons from the current test cycle. The idea is to remove the process bottlenecks for future test cycles and share best practices for 
+any similar projects in the future.
+
+Activities
+  •	Evaluate cycle completion criteria based on Time, Test coverage, Cost, Software, Critical Business Objectives, Quality
+  •	Prepare test metrics based on the above parameters. 
+  •	Document the learning out of the project 
+  •	Prepare Test closure report 
+  •	Qualitative and quantitative reporting of quality of the work product to the customer. 
+  •	Test result analysis to find out the defect distribution by type and severity.
+
+Deliverables 
+  •	Test Closure report 
+  •	Test metrics
