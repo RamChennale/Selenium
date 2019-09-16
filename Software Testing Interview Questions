@@ -243,27 +243,42 @@ User data is saved and accessed remotely in case of web applications.
 Data is stored, saved and accessed from the same machine on which application is installed.
 
 Q #6) What is Intranet Application?
-Answer: Intranet application is a kind of private application which is deployed and run on local LAN server and can only be accessed by the people within the organization. It uses a local network to share information.
-Example: Organization usually has an application which stores information about your attendance, holidays, upcoming celebrations within the organization or some important event or information that needs to be circulated within the organization.
+Answer: Intranet application is a kind of private application which is deployed and run on local LAN server and can only be accessed by
+the people within the organization. It uses a local network to share information.
+Example: Organization usually has an application which stores information about your attendance, holidays, upcoming celebrations within 
+the organization or some important event or information that needs to be circulated within the organization.
+
 Q #7) Explain the difference between Authorization and Authentication in Web testing.
-Answer: The difference between Authorization and Authentication is explained in below table:
+Answer: 
  	Authentication	Authorization
-1	Authentication is the process with which the system identifies who the user is?	Authorization is the process with which system identifies what user is authorized to do?
-2	Authentication determines the identity of the user.	Authorization decides the privileges given to the user i.e. whether the user can access or manipulate features of certain program.
-3	There are different types of authentications, like password based, device based, etc.	There are two types of authorizations, like read only and read write both.
-4	For example: Within an organization, each and every employee can login into an intranet application.	For example: Only account manager or person in accounts department can access account section.
+1	Authentication is the process with which the system identifies who the user is?	
+	Authorization is the process with which system identifies what user is authorized(accessed/supposed) to do?
+2	Authentication determines the identity of the user.	
+	Authorization decides the privileges given to the user i.e. whether the user can access or manipulate features of certain program.
+3	There are different types of authentications, like password based, device based, etc.	
+	There are two types of authorizations, like read only and read write both.
+4	For example: Within an organization, each and every employee can login into an intranet application.	
+For example: Only account manager or person in accounts department can access account section.
+
 Q #8) What are the types of Web testing security problems?
 Answer: Few web security problems include:
 •	Denial of Service (DOS) attack
 •	Buffer overflow
 •	Directly passing internal URL through browser address
 •	Viewing other stats
+
 Q #9) Define HTTP.
-Answer: HTTP stands for Hypertext Transfer Protocol. HTTP is the data transfer protocol which defines how messages are formatted and transferred over the World Wide Web. HTTP also determines the response of the actions performed by web servers and browsers.
-For Example, when an URL is entered on the web browser, the HTTP command is sent to the web server which in turn fetches the requested web browser.
+Answer: HTTP stands for Hypertext Transfer Protocol. HTTP is the data transfer protocol which defines how messages are formatted and 
+transferred over the World Wide Web. HTTP also determines the response of the actions performed by web servers and browsers.
+For Example, when an URL is entered on the web browser, the HTTP command is sent to the web server which in turn fetches the requested
+web browser.
+
 Q #10) Define HTTPS.
-Answer: HTTPS stands for Hypertext Transfer Protocol Secure. This is basically HTTP over SSL (Secure Socket Layer) for security purposes. There is always chances of eavesdrop on data being transferred between a user and the web server when the website uses HTTP protocol.
-Therefore, websites use secure way i.e. SSL encryption of data sent back and forth using HTTPS protocol. Almost all the websites that require user log in uses HTTPS protocol. Few Examples are banking websites, e-commerce websites, etc.
+Answer: HTTPS stands for Hypertext Transfer Protocol Secure. This is basically HTTP over SSL (Secure Socket Layer) for security purposes.
+There is always chances of eavesdrop on data being transferred between a user and the web server when the website uses HTTP protocol.
+Therefore, websites use secure way i.e. SSL encryption of data sent back and forth using HTTPS protocol. Almost all the websites that 
+require user log in uses HTTPS protocol. Few Examples are banking websites, e-commerce websites, etc.
+
 Q #11) What are the common problems faced in Web testing?
 Answer: Some of the common problems faced in web testing are enlisted below:
 •	Server Problem, which includes server down and server under maintenance problems.
@@ -272,57 +287,87 @@ Answer: Some of the common problems faced in web testing are enlisted below:
 •	Security related problems.
 •	Performance and load related problems.
 •	GUI (graphical user interface) related problems.
+
 Q #12) What is Cookie testing?
-Answer: Cookie is said to be a personalized user’s identity or information which is required to communicate between different web pages as well as track user’s navigation through the website pages. Whenever we access any website on any web browser, their respective cookie is written on the hard disk.
-Cookies are used to track user sessions, displays ads, remember user’s choice while accessing any website, remember and retrieve the user’s shopping cart, track the unique number of visitors, etc.
-Suppose an e-commerce site is accessible in many countries like US, Canada, Australia, and their testing is done in India. In that case, while testing the e-commerce site for different countries in India, at first respective countries cookies is set so that actual data like time zone etc., are accessed of that particular country.
+Answer: Cookie is said to be a personalized user’s identity or information which is required to communicate between different web pages
+as well as track user’s navigation through the website pages. Whenever we access any website on any web browser, their respective cookie
+is written on the hard disk.
+Cookies are used to track user sessions, displays ads, remember user’s choice while accessing any website, remember and retrieve the 
+user’s shopping cart, track the unique number of visitors, etc.
+Suppose an e-commerce site is accessible in many countries like US, Canada, Australia, and their testing is done in India.In that case, 
+while testing the e-commerce site for different countries in India, at first respective countries cookies is set so that actual data like
+time zone etc., are accessed of that particular country.
+
 Q #13) Define Client-side validation.
-Answer: Client-side validation is the one which is basically done at the browser level where user’s input is validated at the browser itself with no involvement of the server.
+Answer: Client-side validation is the one which is basically done at the browser level where user’s input is validated at the browser 
+itself with no involvement of the server.
 Let’s understand it with the help of an Example.
-Suppose a user is entering an incorrect email format while filling a form. The browser will then and there prompt an error message to correct it before moving on to next field. Thus every field is corrected before submitting the form.
+Suppose a user is entering an incorrect email format while filling a form. The browser will then and there prompt an error message to 
+correct it before moving on to next field. Thus every field is corrected before submitting the form.
 The client-side validation is usually done by script language such as JavaScript, VBScript, HTML 5 attributes.
 The two types of Client-side validation are:
 •	Field level validation
 •	Form level validation
+
 Q #14) What do you understand by Server-side validation?
-Answer: Server-side validation occurs where the validation and processing of user requests require the response from the server. To understand it more clearly, user’s input is being sent to the server and validation is done using server-side scripting languages such as PHP, Asp.NET, etc.
+Answer: Server-side validation occurs where the validation and processing of user requests require the response from the server. 
+To understand it more clearly, user’s input is being sent to the server and validation is done using server-side scripting languages 
+such as PHP, Asp.NET, etc.
 After the validation process, feedback is sent back to the client in the form of dynamically generated web page.
-When compared to the Client Side validation process, Server side validation process is more secure because here application is protected against malicious attacks and users can easily bypass client-side scripting language.
+When compared to the Client Side validation process, Server side validation process is more secure because here application is protected
+against malicious attacks and users can easily bypass client-side scripting language.
+
 Q #15) Differentiate between Static and Dynamic website.
 Answer: Difference between static and dynamic websites are as follows:
 Static Website	Dynamic website
-Static websites are the one which gives out information only and there is no sort of interaction between the user and the website.	Dynamic websites are the one where user interaction is possible between the website and user along with imparting information.
-Static websites are cheapest to develop and host.	Dynamic websites are more expensive to develop as well as their hosting cost is also more.
-Static websites are easily loaded on client browser because of its fixed content and no database connectivity.	Dynamic websites usually take the time to load on client browser because contents to display are dynamically created and retrieved using database queries.
-Static websites can be created from HTML, CSS and does not require any server application language.	Dynamic websites require server application language like ASP.NET, JSP, PHP to run the application on the server and display the output on the webpage.
-Change in the content of the page of any static website; require being uploaded on server many times.	Dynamic website provides facilities to change the page content using server application.
+Static websites are the one which gives out information only and there is no sort of interaction between the user and the website.	
+Dynamic websites are the one where user interaction is possible between the website and user along with imparting information.
+Static websites are cheapest to develop and host.	
+Dynamic websites are more expensive to develop as well as their hosting cost is also more.
+Static websites are easily loaded on client browser because of its fixed content and no database connectivity.	
+Dynamic websites usually take the time to load on client browser because contents to display are dynamically created and retrieved using
+database queries.
+Static websites can be created from HTML, CSS and does not require any server application language.	
+Dynamic websites require server application language like ASP.NET, JSP, PHP to run the application on the server and display the output
+on the webpage.
+Change in the content of the page of any static website; require being uploaded on server many times.	
+Dynamic website provides facilities to change the page content using server application.
+
 Q #16) What do you understand by Client-Server testing?
-Answer: Client-server application is the one where the application itself is loaded or installed on a server whereas the application EXE file is loaded on all client machines. This environment is usually used in Intranet networks.
+Answer: Client-server application is the one where the application itself is loaded or installed on a server whereas the application 
+EXE file is loaded on all client machines. This environment is usually used in Intranet networks.
 Following tests are performed on a Client-server application:
 •	GUI testing on both client and server systems.
 •	Client-server interaction.
 •	The functionality of an application.
 •	Load and performance testing.
 •	Compatibility testing.
-All the test cases and test scenarios used in client-server application testing is derived from the tester’s experience and requirement specifications.
+All the test cases and test scenarios used in client-server application testing is derived from the tester’s experience and requirement
+specifications.
+
 Q #17) Enlist HTTP response codes that are returned by the server.
 Answer: HTTP response codes are enlisted below:
-•	2xx – This means ‘Success’
+•	1xx- This means 'Continue' informational status response code indicates that everything so far is OK
+•	2xx– This means ‘Success’
 •	3xx- This means ‘Redirection’
 •	4xx- This means ‘Application error’
 •	5xx- This means ‘Server error’
+
 Q #18) What is the role of Usability testing in Web testing?
-Answer: In web testing, Usability testing plays an important role. It is well known that usability testing is the means to determine the ease with which an end user can easily access the application with or without having any programming language knowledge.
+Answer: In web testing, Usability testing plays an important role. It is well known that usability testing is the means to determine the
+ease with which an end user can easily access the application with or without having any programming language knowledge.
 In terms of web testing, usability testing comprises of the following:
 •	To check whether the website is user-friendly?
 •	Is the end user able to easily navigate within the application?
 •	Presence of any issues or ambiguity which can hinder the user experience.
 •	Check how quickly the user is able to complete the task within the application.
+
 Q #19) What are the available environments on the Web?
 Answer: The different types of the environment on the Web are:
 •	Intranet (Local Network)
 •	Internet (Wide Area Network)
 •	Extranet(Private network over the internet)
+
 Q #20) What are the test case formats in case of a Static website and Dynamic website?
 Answer: The following test case formats will be used in case of Static websites:
 •	Front-end test cases
@@ -333,6 +378,7 @@ The following test case formats will be used in case of Dynamic websites:
 •	Navigation test cases
 •	Field validation test cases
 •	Security test cases, etc.
+
 Q #21) Enlist some sub-classes of HTTP response objects?
 Answer: Write, Flush, tell, etc are few HTTP response objects.
 The sub-classes of HTTP response are:
@@ -340,6 +386,7 @@ The sub-classes of HTTP response are:
 •	HttpResponsePermanentRedirect
 •	HttpResponseBadRequest
 •	HttpResponseNotfound
+
 Q #22) Enlist some Web Testing Tools.
 Answer: Few Web testing tools are enlisted below:
 •	eggplant functional
@@ -347,6 +394,7 @@ Answer: Few Web testing tools are enlisted below:
 •	SOA test
 •	JMeter
 •	iMacros, etc.
+
 Q #23) Give some examples of web applications that are used in our day to day life.
 Answer: Few Examples include:
 •	Web portals like eBay, Amazon, Flipkart etc.
@@ -354,9 +402,12 @@ Answer: Few Examples include:
 •	Email service providers like Gmail, Yahoo, Hotmail etc.
 •	Social Networks like Facebook, Twitter, LinkedIn etc.
 •	Discussion and Information forums like www.Softwaretestinghelp.com
+
 Q #24) What is a Proxy server?
 Answer: Proxy server is a server which acts as an intermediary or is the one that lies between the client and the main server.
-The communication between the main server and client-server is done through a proxy server as the client request of any connection, file, resources from the main server is sent through a proxy server and again the response from the main server or local cached memory to client-server is done through the proxy server.
+The communication between the main server and client-server is done through a proxy server as the client request of any connection, 
+file, resources from the main server is sent through a proxy server and again the response from the main server or local cached memory
+to client-server is done through the proxy server.
 Some of the most common proxy servers based on their purpose and functionality are listed below:
 •	Transparent proxy
 •	Web proxy
@@ -369,60 +420,97 @@ The proxy server is basically used for the following purposes:
 •	Proxy server filters web page content in the form of web proxies.
 •	A proxy server is also used to block offensive web content to be accessed by the user especially in an organization, school, and college.
 •	Web proxies prevent the attack of computer viruses and malware.
+
 Q #25) What is Database server?
-Answer: A Database server can be defined as a server that refers to the back-end system of a database application that provides database services such as accessing and retrieving data from the database.
-Database server uses client/server architecture where the data can be accessed either through the database server by a “front end” which runs and displays data on user’s machine or “back-end” which runs on the database server itself.
+Answer: A Database server can be defined as a server that refers to the back-end system of a database application that provides database
+services such as accessing and retrieving data from the database.
+Database server uses client/server architecture where the data can be accessed either through the database server by a “front end” which
+runs and displays data on user’s machine or “back-end” which runs on the database server itself.
 A database server is like a data warehouse and also holds on Database Management System (DBMS).
-*********************
-Few More Basic Software Testing Interview Questions
+
+Basic Software Testing Interview Questions
 Q. What is Dynamic Testing?
 Ans. It is the testing done by executing the code or program with various input values and later on the output is verified.
+
 Q. What is GUI Testing?
-Ans. GUI or Graphical user interface testing is the process of testing the software user interface against the provided requirements/mockups/HTML designs etc.,
+Ans. GUI or Graphical user interface testing is the process of testing the software user interface against the provided requirements/
+mockups/HTML designs etc.,
+
 Q. What is Formal Testing?
-Ans. Software verification carried out by following a test plan, testing procedures and proper documentation with approval from the customer is termed as Formal Testing.
+Ans. Software verification carried out by following a test plan, testing procedures and proper documentation with approval from the 
+customer is termed as Formal Testing.
+
 Q. What is Risk Based Testing?
-Ans. Identifying the critical functionality in the system and then deciding the orders in which these functionalities are to be tested and testing after that is termed as Risk-based Testing.
+Ans. Identifying the critical functionality in the system and then deciding the orders in which these functionalities are to be tested 
+and testing after that is termed as Risk-based Testing.
+
 Q. What is Early Testing?
-Ans. Conducting testing as soon as possible in the development lifecycle to find defects at early stages of STLC. Early testing is helpful to reduce the cost of fixing defects at the later stages of STLC.
+Ans. Conducting testing as soon as possible in the development lifecycle to find defects at early stages of STLC. Early testing is 
+helpful to reduce the cost of fixing defects at the later stages of STLC.
+
 Q. What is Exhaustive Testing?
 Ans. Testing functionality with all valid, invalid inputs and pre-conditions is called Exhaustive testing.
+
 Q. What is Defect Clustering?
-Ans. Any small module or functionality may contain a number of defects – concentrating more on testing these functionalities is known as Defect Clustering.
+Ans. Any small module or functionality may contain a number of defects – concentrating more on testing these functionalities is known as
+Defect Clustering.
+
 Q. What is Pesticide Paradox?
 Ans. If prepared test cases are not finding defects, add/revise test cases to find more defects, this is known as Pesticide Paradox.
 Q. What is Static Testing?
-Ans. Manual verification of the code without executing the program is called Static Testing. In this process, the issues are identified in the code by checking code, requirement and design documents.
+
+Ans. Manual verification of the code without executing the program is called Static Testing. In this process, the issues are identified
+in the code by checking code, requirement and design documents.
+
 Q. What is Positive Testing?
-Ans. It is the Testing which is conducted on the application to determine if the system works properly. Basically known as “test to pass” approach.
+Ans. It is the Testing which is conducted on the application to determine if the system works properly. Basically known as “test to
+pass” approach.
+
 Q. What is Negative Testing?
-Ans. Testing Software with a negative approach to check if the system is not “showing error when not supposed to” and “not showing error when supposed to” is termed as Negative Testing.
+Ans. Testing Software with a negative approach to check if the system is not “showing error when not supposed to” and “not showing error
+when supposed to” is termed as Negative Testing.
+
 Q. What is an End-to-End Testing?
 Ans. Testing the overall functionality of the system including the data integration among all the modules is called End-to-End Testing.
+
 Q. What is Exploratory Testing?
-Ans. Exploring the application, understanding its functionalities, adding (or) modifying the existing test cases for better testing is called Exploratory testing.
+Ans. Exploring the application, understanding its functionalities, adding (or) modifying the existing test cases for better testing is
+called Exploratory testing.
+
 Q. What is Monkey Testing?
-Ans. Testing conducted on an application without any plan and carried out randomly with the tests to find any system crash with an intention of finding tricky defects is called Monkey Testing.
+Ans. Testing conducted on an application without any plan and carried out randomly with the tests to find any system crash with an 
+intention of finding tricky defects is called Monkey Testing.
+
 Q. What is Non-Functional Testing?
-Ans. Validating various non-functional aspects of the system such as user interfaces, user-friendliness, security, compatibility, Load, Stress, and Performance etc., is called Non-Functional testing.
+Ans. Validating various non-functional aspects of the system such as user interfaces, user-friendliness, security, compatibility, Load,
+Stress, and Performance etc., is called Non-Functional testing.
+
 Q. What is Usability Testing?
 Ans. Checking how easily the end users are able to understand and operate the application is called Usability Testing.
+
 Q. What is Security Testing?
 Ans. Validating whether all security conditions are properly implemented in the software (or) not is called Security testing.
+
 Q. What is Performance Testing?
-Ans. The process of measuring various efficiency characteristics of a system such as response time, load stress transactions per minutes, transaction mix etc., is termed Performance Testing.
+Ans. The process of measuring various efficiency characteristics of a system such as response time, load stress transactions per 
+minutes,transaction mix etc., is termed Performance Testing.
+
 Q. What is Load Testing?
 Ans. Analyzing both the functional and performance behavior of an application under various conditions is called Load Testing.
+
 Q. What is Stress Testing?
 Ans. Checking the application behavior under stress conditions
 (or)
 Reducing the system resources and keeping the load as constant and checking how the application is behaving is called Stress Testing.
+
 Q. What is Process?
 Ans. A process is a set of practices performed to achieve a given purpose; it may include tools, methods, materials or people.
+
 Q. What is Software Configuration Management?
 Ans. The process of identifying, Organizing and controlling changes to the Software development and maintenance.
 (or)
 It is a methodology to control and manage a software development project.
+
 Q. What is a Testing Process / LifeCycle?
 Ans. It includes the below factors:
 Writing a Test Plan
@@ -434,70 +522,114 @@ Defect Reporting
 Defect Tracking
 Defect Closing
 Test Release
+
 Q. What is the full form of CMMI?
 Ans. Capability Maturity Model Integration
+
 Q. What is a Code Walk Through?
 Ans. An informal analysis of the program source code to find the defects and verify the coding techniques is termed so.
+
 Q. What is Unit Level Testing?
 Ans. Testing of single programs, modules or unit of code is termed as Unit Level Testing.
+
 Q. What is Integration Level Testing?
 Ans. Testing of related programs, Modules (or) Unit of code.
 (or)
 Partitions of the system which is ready for testing with other partitions of the system is termed so.
+
 Q. What is System Level Testing?
-Ans. Testing of the entire computer system across all the modules is termed so.  This kind of testing can include Functional as well as Structural Testing.
+Ans. Testing of the entire computer system across all the modules is termed so.  This kind of testing can include Functional as well as
+Structural Testing.
+
 Q. What is Alpha Testing?
 Ans. Testing of a whole computer system before rolling out to the UAT is termed so.
+
 Q. What is User Acceptance Testing (UAT)?
 Ans. Testing of a computer system by the client to verify if it adhered to the provided requirements.
+
 Q. What is a Test Plan?
-Ans. It is a document describing the scope, approach, resources, and schedule of testing activities.  It identifies test items, features to be tested, testing tasks, who will do each task, and any risks requiring contingency planning.
+Ans. It is a document describing the scope, approach, resources, and schedule of testing activities.  It identifies test items, features
+to be tested, testing tasks, who will do each task, and any risks requiring contingency planning.
+
 Q. What is a Test Scenario?
 Ans. Identifying all the possible areas to be tested (or) what is to be tested is termed so.
+
 Q. What is ECP (Equivalence Class Partition)?
 Ans. It is a method for deriving test cases.
+
 Q. What is a Defect?
 Ans. Any flaw or imperfection in a software work product is termed as a Defect.
 (or)
 When the expected result does not match with the application actual result, it is termed so.
+
 Q. What is Severity?
-Ans. It defines the importance of the defect from the functional point of view i.e. how critical is a defect with respect to the application.
+Ans. It defines the importance of the defect from the functional point of view i.e. how critical is a defect with respect to the
+application.
+
 Q. What is Priority?
 Ans. It indicates the importance or urgency of fixing a defect
+
 Q. What is Re-Testing?
 Ans. Re-testing the application means verifying whether the defects have been fixed or not.
+
 Q. What is Regression Testing?
-Ans. Verifying an existing functional and non-functional area after making changes to the part of a software or addition of new features is termed so.
+Ans. Verifying an existing functional and non-functional area after making changes to the part of a software or addition of new features
+is termed so.
+
 Q. What is Recovery Testing?
 Ans. Checking whether the system is able to handle some unexpected or unpredictable situations is called Recovery Testing.
+
 Q. What is Globalization Testing?
-Ans. It is the process of verifying whether software can be run independently of its geographical and cultural environment. Checking if the application is having features of setting and changing language, date, format, and currency if it is designed for global users.
+Ans. It is the process of verifying whether software can be run independently of its geographical and cultural environment. 
+Checking if the application is having features of setting and changing language, date, format, and currency if it is designed for 
+global users.
+
 Q. What is Localization Testing?
 Ans. Verifying globalized application for a particular locality of users, under cultural and geographical conditions is termed so.
+
 Q. What is Installation Testing?
-Ans. Checking whether we are able to install a software successfully (or) not, as per the guidelines given in the installation document is called Installation Testing.
+Ans. Checking whether we are able to install a software successfully (or) not, as per the guidelines given in the installation document 
+is called Installation Testing.
+
 Q. What is Un-Installation Testing?
 Ans. Checking whether we are able to uninstall the software from the system successfully (or) not is called Un-Installation Testing
+
 Q. What is Compatibility Testing?
-Ans. Checking whether the application is compatible with different software and hardware environment or not is called Compatibility Testing.
+Ans. Checking whether the application is compatible with different software and hardware environment or not is called Compatibility 
+Testing.
+
 Q. What is a Test Strategy?
-Ans. It is a part of a test plan describing how testing is carried out for the project and what testing types need to be performed on the application.
+Ans. It is a part of a test plan describing how testing is carried out for the project and what testing types need to be performed on
+the application.
+
 Q. What is a Test Case?
-Ans. A Test case is a set of pre-conditional steps to be followed with input data and expected behavior to validate the functionality of a system.
+Ans. A Test case is a set of pre-conditional steps to be followed with input data and expected behavior to validate the functionality of
+a system.
+
 Q. What is Business Validation Test Case?
 Ans. A test case which is prepared to check the business condition or a business requirement is called Business Validation test case.
+
 Q. What is a Good Test Case?
 Ans. A Test case that has the high priority of catching defects is called a Good Test Case.
+
 Q. What is Use Case Testing?
 Ans. Validating a software to confirm whether it is developed as per the use cases or not is called Use Case testing.
+
 Q. What is a Defect Age?
 Ans. The time gap between the date of detection & the date of closure of a defect is termed so.
+
 Q. What is Showstopper Defect?
 Ans. A defect which is not permitting to continue further with testing is called Showstopper Defect.
+
 Q. What is a Test Closure?
-Ans. It is the last phase of the STLC,  where the management prepares various test summary reports that explain the complete statistics of the project based on the testing carried out.
+Ans. It is the last phase of the STLC,  where the management prepares various test summary reports that explain the complete statistics
+of the project based on the testing carried out.
+
 Q. What is Bucket Testing?
-Ans. Bucket testing is also known as A/B testing. It is mostly used to study the impact of various product designs in the website metrics. Two simultaneous versions are run on a single or a set of web pages to measure the difference in click rates, interface, and traffic.
+Ans. Bucket testing is also known as A/B testing. It is mostly used to study the impact of various product designs in the website
+metrics. Two simultaneous versions are run on a single or a set of web pages to measure the difference in click rates, interface, and
+traffic.
+
 Q. What is meant by Entry Criteria and Exit Criteria in Software Testing?
 Ans. Entry Criteria is the process that must be present when a system begins, like,
 SRS – Software
@@ -505,28 +637,45 @@ FRS
 Use Case
 Test Case
 Test Plan
+
 Exit criteria ensure whether the testing is completed and the application is ready for release, like,
 Test Summary Report,
 Metrics
 Defect Analysis Report.
+
 Q. What is Concurrency Testing?
-Ans. This is a multiple user testing to access the application at the same time to verify the effect on code, module or DB and it is mainly used to identify the locking and deadlocking situations in the code.
+Ans. This is a multiple user testing to access the application at the same time to verify the effect on code, module or DB and it is
+mainly used to identify the locking and deadlocking situations in the code.
+
 Q. What is Web Application Testing?
-Ans. Web application testing is done on a website to check – load, performance, security, Functionality, Interface, Compatibility and other usability-related issues.
+Ans. Web application testing is done on a website to check – load, performance, security, Functionality, Interface, Compatibility and 
+other usability-related issues.
+
 Q. What is Unit Testing?
 Ans. Unit testing is done to check whether the individual modules of the source code are working properly or not.
+
 Q. What is Interface Testing?
-Ans. Interface testing is done to check whether the individual modules are communicating properly as per the specifications or not. Interface testing is mostly used to test the user interface of GUI applications.
+Ans. Interface testing is done to check whether the individual modules are communicating properly as per the specifications or not. 
+Interface testing is mostly used to test the user interface of GUI applications.
+
 Q. What is Gamma Testing?
-Ans. Gamma testing is done when the software is ready for release with the specified requirements, this testing is done directly by skipping all the in-house testing activities.
+Ans. Gamma testing is done when the software is ready for release with the specified requirements, this testing is done directly by 
+skipping all the in-house testing activities.
+
 Q. What is the Test Harness?
-Ans. Test Harness is configuring a set of tools and test data to test an application under various conditions, which involves monitoring the output with the expected output for correctness.
+Ans. Test Harness is configuring a set of tools and test data to test an application under various conditions, which involves monitoring
+the output with the expected output for correctness.
 The benefits of Testing Harness are: Productivity increase due to process automation and increase in the product quality
+
 Q. What is Scalability Testing?
-Ans. It is used to check whether the functionality and performance of a system are capable to meet the volume and size changes as per the requirements.
+Ans. It is used to check whether the functionality and performance of a system are capable to meet the volume and size changes as per 
+the requirements.
 Scalability testing is done using load test by changing various software, hardware configurations, and testing environment.
+
 Q. What is Fuzz Testing?
-Ans. Fuzz testing is a black box testing technique which uses random bad data to attack a program to check if anything breaks in the application.
+Ans. Fuzz testing is a black box testing technique which uses random bad data to attack a program to check if anything breaks in the 
+application.
+
 Q. What is the Difference between QA, QC, and Testing?
 Ans. QA?
 It is process oriented and its Aim is to prevent the defects in an application.
@@ -534,10 +683,7 @@ QC?
 QC is product oriented and it is a Set of activities used to evaluate a developed work product
 Testing?
 Executing and verifying an application with the intention of finding defects.
-Q. What is Date Driven Testing?
-Ans. It is an Automation testing process in which an application is tested with multiple sets of data with different preconditions as an input to the script.
-Conclusion
-I hope that the above given Manual Software Testing Interview Questions and Answers are beneficial to each of you.
-I’m sure that with a thorough knowledge of these Questions and Answers, you can appear for any QA Testing Interview confidently and get through very successfully.
-We wish you all success !!
 
+Q. What is Date Driven Testing?
+Ans. It is an Automation testing process in which an application is tested with multiple sets of data with different preconditions as an
+input to the script.
