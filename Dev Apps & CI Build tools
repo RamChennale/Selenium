@@ -1,0 +1,398 @@
+Eclipse External Tool configuration: Maven clean install and Jetty server 
+************************************************************************
+Clean: 
+Name: clean
+Location: C:\apache-maven-3.1.1\bin\mvn.bat
+Working Directory: ${project_loc}
+Arguments: eclipse:clean eclipse:eclipse
+
+install :
+Name: install
+Location: C:\apache-maven-3.1.1\bin\mvn.bat
+Working Directory: ${project_loc}
+Arguments: clean compile install
+
+Jetty:
+Name: Jetty
+Location: C:\apache-maven-3.1.1\bin\mvn.bat
+Working Directory: ${project_loc}
+Arguments: jetty:run
+
+**********************
+Jenkins and Maven difference
+
+MAVEN	JENKINS
+Maven is building tool/environment.
+
+In short a successor of ant. It helps in build and version control.
+	Jenkins is a continuous integration (CI) tool.
+Where in maven is used for build. Jenkins can be used to automate the deployment process. Whenever the new code is committed, automatically run all Junit test cases and if they're passed, package and deploy the project to the specific location
+Maven is more like a replacement for Ant.
+1.	It assists building of the project through plug-in e.g. build and version control, JUnit tests, etc...
+2.	It manages dependencies of your project. You define how a project should be built (plug-in) and what libraries are needed (dependencies) in a pom.xml file.	Jenkins can listen to different events, e.g svn commit, current time is midnight etc.
+
+Jenkins gives you the power to decide when to call the pom.xml file, based on what condition to call, and what you want to do with the outcome. 
+This is a powerful idea. For example, you can ask Jenkins to trigger a build or run through all JUnit tests whenever a new code is committed and then, if the unit tests are passed, deploy on a target machine. Or schedule heavy tasks at midnight e.g. unit tests. This is the basic idea of auto deployment or AKA continuous integration (CI)
+Maven is a build tool that manages dependencies and the application life cycle. It also had a plug in design that allows you to add other tasks to the standard compile/test/package/install/deploy tasks.
+	Jenkins is a continuous integration suite that checks your code out of a repository, builds and packages it, and dumps it out to a server so you can test it - all hands-off. It can use Maven or Ant as its build tool.
+In summary, Jenkins can use Maven as its build tool for continuous integration. You can use Maven without Jenkins if you choose not to do CI.
+
+**********************
+How to start jenkins on different port rather than 8080 using command prompt in Windows?
+
+Go to jenkin available location and use the following command at command prompt:
+
+To run jenkin
+c:\>java -jar jenkins.war
+
+To set a separate port other than 8080
+c:\>java -jar jenkins.war --httpPort=9090
+
+If you want to use https use the following command:
+c:\>java -jar jenkins.war --httpsPort=9090
+***********************
+
+What is Maven?
+•	Maven is a project management tool that is based on POM (project object model). 
+•	It is used for projects build, manages dependency and documentation. 
+•	It simplifies the build process.
+
+Why Maven Required?
+•	Maven project eliminates the Adding set of Jars in each project.
+•	It Creates write Project Structure.
+•	Building and deploying the project is very simple.
+
+What is Build Tool
+A build tool takes care of everything for building a process. It does following:
+•	Generates source code 
+•	Compiles source code
+•	Packages compiled code into JAR/WAR of ZIP file
+•	Installs the packaged code in local repository, server repository, or central repository
+
+How to install Maven in Window machine 
+•	Download maven and extract it
+•	Add JAVA_HOME and MAVEN_HOME in environment variable
+•	Add maven path in environment variable
+•	Verify Maven
+Apache-maven-3.5.0-bin.zip
+
+ 
+
+Verify maven
+To verify whether maven is installed or not, open the command prompt and write:
+
+C:\>mvn –version
+Maven home: E:\apache-maven\apache-maven-3.3.9\bin 
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_144\bin
+
+
+Maven Repository
+There are 3 types of maven repository:
+•	Local Repository
+•	Central Repository
+•	Remote Repository
+Maven searches for the dependencies in the following order:
+Local repository then Central repository then Remote repository.
+Local Repository: Means .m2 folder in your system
+Central Repository: Maven central repository is located on the web. It has been created by the apache maven community itself
+Remote Repository: Company Specific Library or Custom Library
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http:// www.w3.org/2001 /XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion> 
+<groupId>com.lotus.eps</groupId>
+<artifactId>Cucumber</artifactId>
+<version>0.0.1</version>
+<packaging>jar</packaging>
+  <name>selenium</name>
+  <url>http://maven.apache.org</url>
+<dependencies>
+<dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-java</artifactId>
+<version>3.5.1</version>
+<scope>test</scope> 
+</dependency>
+</dependencies>
+</project>
+
+Project: It is the root element of pom.xml file
+Model Version: It is the sub element of project. It specifies the model Version. It should be set to 4.0.0
+Group Id: will identify your project uniquely across all projects (com.test.selenium)  i.e. package name
+Artifact Id: project name i.e. Is the jar/war build name.
+Packaging: defines packaging type such as jar, war etc. i.e. specify which kind build you need Jar/War
+Dependencies: defines dependencies for this project.
+Dependency: defines a dependency. It is used inside dependencies.
+Scope: defines scope for this maven project. It can be compile, provided, runtime, test and system.
+ 
+ 
+
+Maven Life Cycle 
+Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
+For the person building a project, this means that it is only necessary to learn a small set of commands to build any Maven project, and the POM will ensure they get the results they desired.
+There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project's site documentation.
+
+•	validate - validate the project is correct and all necessary information is available
+•	compile - compile the source code of the project
+•	test - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+•	package - take the compiled code and package it in its distributable format, such as a JAR.
+•	verify - run any checks on results of integration tests to ensure quality criteria are met
+•	install - install the package into the local repository, for use as a dependency in other projects locally
+•	deploy - done in the build environment, copies the final package to the remote repository for sharing with other developers and projects. 
+
+
+
+1.	Maven executes all life cycle phases until the specified one.
+For example the mvn clean install command triggers the jar packaging. 
+This includes  	1. Compiling the sources, 
+2. Executing the tests and 
+3. Packaging the compiled files in a JAR file. 
+As last step the install phase installs the resulting artifact into the local repository, so it can be used as dependencies by other Maven builds.
+Maven creates the build result in the target folder.
+mvn install 
+	compile, build and install the build result
+	
+2.	To ensure that the build target is removed before a new build, add the clean target.
+mvn clean install
+
+
+
+Usual Command Line Calls
+In a development environment, use the following call to build and install artifacts into the local repository.
+mvn install
+This command executes each default life cycle phase in order (validate, compile, package, etc.), before executing install. You only need to call the last build phase to be executed, in this case, install:
+In a build environment, use the following call to cleanly build and deploy artifacts into the shared repository.
+mvn clean deploy
+The same command can be used in a multi-module scenario (i.e. a project with one or more subprojects). Maven traverses into every subproject and executes clean, then executes deploy (including all of the prior build phase steps).
+
+
+*********************
+
+Steps to run build from jenkin
+Step 1: Go to project location 
+C:\user> cd C:\Users\ramchennale\git\projects\automation
+Step 2: run maven project 
+C:\Users\ramchennale\git\projects\automation>mvn clean test 
+
+**********************
+What is Maven?
+•	Maven is a project management tool that is based on POM (project object model). 
+•	It is used for projects build, manages dependency and documentation. 
+•	It simplifies the build process.
+
+Why Maven Required?
+•	Maven project eliminates the Adding set of Jars in each project.
+•	It Creates write Project Structure.
+•	Building and deploying the project is very simple.
+
+What is Build Tool
+A build tool takes care of everything for building a process. It does following:
+•	Generates source code 
+•	Compiles source code
+•	Packages compiled code into JAR/WAR of ZIP file
+•	Installs the packaged code in local repository, server repository, or central repository
+
+How to install Maven in Window machine 
+•	Download maven and extract it
+•	Add JAVA_HOME and MAVEN_HOME in environment variable
+•	Add maven path in environment variable
+•	Verify Maven
+Apache-maven-3.5.0-bin.zip
+
+ 
+
+Verify maven
+To verify whether maven is installed or not, open the command prompt and write:
+
+C:\>mvn –version
+Maven home: E:\apache-maven\apache-maven-3.3.9\bin 
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_144\bin
+
+
+Maven Repository
+There are 3 types of maven repository:
+•	Local Repository
+•	Central Repository
+•	Remote Repository
+Maven searches for the dependencies in the following order:
+Local repository then Central repository then Remote repository.
+Local Repository: Means .m2 folder in your system
+Central Repository: Maven central repository is located on the web. It has been created by the apache maven community itself
+Remote Repository: Company Specific Library or Custom Library
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http:// www.w3.org/2001 /XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion> 
+<groupId>com.lotus.eps</groupId>
+<artifactId>Cucumber</artifactId>
+<version>0.0.1</version>
+<packaging>jar</packaging>
+  <name>selenium</name>
+  <url>http://maven.apache.org</url>
+<dependencies>
+<dependency>
+<groupId>org.seleniumhq.selenium</groupId>
+<artifactId>selenium-java</artifactId>
+<version>3.5.1</version>
+<scope>test</scope> 
+</dependency>
+</dependencies>
+</project>
+
+Project: It is the root element of pom.xml file
+Model Version: It is the sub element of project. It specifies the model Version. It should be set to 4.0.0
+Group Id: will identify your project uniquely across all projects (com.test.selenium)  i.e. package name
+Artifact Id: project name i.e. Is the jar/war build name.
+Packaging: defines packaging type such as jar, war etc. i.e. specify which kind build you need Jar/War
+Dependencies: defines dependencies for this project.
+Dependency: defines a dependency. It is used inside dependencies.
+Scope: defines scope for this maven project. It can be compile, provided, runtime, test and system.
+ 
+ 
+
+Maven Life Cycle 
+Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined.
+For the person building a project, this means that it is only necessary to learn a small set of commands to build any Maven project, and the POM will ensure they get the results they desired.
+There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project's site documentation.
+
+•	validate - validate the project is correct and all necessary information is available
+•	compile - compile the source code of the project
+•	test - test the compiled source code using a suitable unit testing framework. These tests should not require the code be packaged or deployed
+•	package - take the compiled code and package it in its distributable format, such as a JAR.
+•	verify - run any checks on results of integration tests to ensure quality criteria are met
+•	install - install the package into the local repository, for use as a dependency in other projects locally
+•	deploy - done in the build environment, copies the final package to the remote repository for sharing with other developers and projects. 
+
+
+
+1.	Maven executes all life cycle phases until the specified one.
+For example the mvn clean install command triggers the jar packaging. 
+This includes  	1. Compiling the sources, 
+2. Executing the tests and 
+3. Packaging the compiled files in a JAR file. 
+As last step the install phase installs the resulting artifact into the local repository, so it can be used as dependencies by other Maven builds.
+Maven creates the build result in the target folder.
+mvn install 
+	compile, build and install the build result
+	
+2.	To ensure that the build target is removed before a new build, add the clean target.
+mvn clean install
+
+
+
+Usual Command Line Calls
+In a development environment, use the following call to build and install artifacts into the local repository.
+mvn install
+This command executes each default life cycle phase in order (validate, compile, package, etc.), before executing install. You only need to call the last build phase to be executed, in this case, install:
+In a build environment, use the following call to cleanly build and deploy artifacts into the shared repository.
+mvn clean deploy
+The same command can be used in a multi-module scenario (i.e. a project with one or more subprojects). Maven traverses into every subproject and executes clean, then executes deploy (including all of the prior build phase steps).
+
+
+
+**********************
+
+Using Maven to run specific tests and all
+1.	To run all tests
+C:/>Mvn clean test
+2.	To run all specific tests
+C:/>Mvn clean –Dtest=textng.xml
+(need to provide reference for textng.xml in pom.xml as ${filename})
+Stack overflow:
+You can run all the tests in a class, by passing the -Dtest=<class> flag to Maven:
+Mvn clean test -Dtest=xxxxtest
+Since Surefire 2.8, you can also run an individual test, say a method testa within your unit tests, using the same flag:
+Mvn clean test -Dtest=xxxxtest#testa
+
+
+Why Run 'mvn clean'?
+It clears out the existing classes that you compiled from last compile. If you don't want to run 3 lines, just do "mvn test" after "mvn clean". You don't have to always do "mvn compile". If you don't do clean compile then it means you are still allowing to work with some obsolete classes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To run test from command prompt: 
+
+Step 1: Add maven surefire plug in pom.xml  
+Step 2: provide location path of testng.xml file (provide complete path facing issue)
+Step 3: open cmd prompt goto location of project 
+( ex: C:\Users\ramchennale\git\projects\automation)
+Step 4: Run the command > mvn clean 
+(It clears out the existing classes that you compiled from last compile )
+Step 4.1: Run the command > mvn clean test (TO run test)
+
+To pass the suit name dynamically, need to change in pom.xml like 
+Ex: In following pom.xml
+<build>
+<plugins>
+      <plugin>
+      	  	<groupId>org.apache.maven.plugins</groupId>
+     	  	 <artifactId>maven-surefire-plugin</artifactId>
+              	<version>2.22.0</version>
+        <configuration>
+         	 <suiteXmlFiles>
+            		<suiteXmlFile>testng.xml</suiteXmlFile>
+             </suiteXmlFiles>
+        </configuration>
+      </plugin>
+</plugins>
+</build>
+
+TO: 
+Step 1: In pom.xml in place of testng.xml file name give a reference ${filename}
+Step 2: Run the command > mvn clean test -DtestFilename=testng.xml
+Ex: Update filename reference in suitxmlfile
+<suiteXmlFile>${ filename}</suiteXmlFile>
+
+
+
+We can also include and exclude the separate test case in more specific 
+<configuration>
+          <!--  <includes>
+            <include>com.qa.homePageTests.Login.java</include>
+          </includes>
+          <excludes>
+            <exclude>**/TestCircle.java</exclude>
+            <exclude>**/TestSquare.java</exclude>
+          </excludes> -->
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+
+***********************
+
+Download and run jenkins war default runs on localhost  8080 port 
+URL: http://localhost:8080
+
+Steps to run build from jenkin
+Step 1: create new job with freestyle project  
+Step 2: Go to Build Triggers- Build 
+Select Execute windows batch command (add commands to run selenium tests) 
+c:
+cd C:\Users\ramchennale\git\projects\automation
+mvn clean
+mvn clean test
+echo success
+Step 3: Apply and Save
+Step 4: Click Build Now and Run & Validates
+
+
+*********************
+
+
+
+
