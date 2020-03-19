@@ -1186,5 +1186,81 @@ I want to start learning immediately and build my skills, as well as help your o
 
 **********************
 
+SELENIUM MANAGER
+
+1.	Introduce yourself – Brief name and overall experience and roles & responsibilities and major skill set. 
+2.	Explain about your project?- Project title, domain , client, roles & responsibilities in project and different components  
+3.	 What are responsibilities in project? – where you involved in your project, your contribution and your role.
+4.	What are challenges faced and resolved in your project? Need to explain 5 to 8 chllanges
+5.	 Wt team size ?- 10 to 12
+6.	Tools and technologies: selenium, java, TestNG, maven, jenking, APACH POI
+7.	Where you applied oops concept ? explain Oops and how do you used in your project 
+8.	What framework used ?
+9.	 SQL query ? need to prepare DML, DDL, Joins and CURD and basic SQL ? query to find highest salary of emp ?
+10.	Write TC to capture failed test cases ?
+11.	How to create bug reports in Jira ?- test cycle of bug create , new, progress, close and  done
+12.	Expalain testing process in your company?
+13.	Who assign work to you and how do receive ?
+14.	What appreciation you achieved in your company ?
+15.	Explain day to day activity in company ? from standup meeting to end reporting report and mail
+16.	Suppose 200 TC are need to test but only 2 days left to test, what type of testing you prefer.- need logical thinking and 
+17.	 You found defect and sent to developer but development team rejected what you do?-
+18.	Explain project framework architecture ?  
+19.	Explain the flow of agile process ?
+
 **********************
+Slenium ToDo
+
+1.	How will execute only failed test case? (Listeners)D
+2.	Extent report needs to go. D
+3.	How will extract only duplicate value pair from HashMap for.
+4.	How to extract unique values in Array (using set collection framework).
+5.	Agile retrospective meeting.
+6.	How will you get the only duplicate values from dropdown (using select of getOption())
+
+1.	How you used Encapsulation in your project? –Utility predefined classes are Encapsulation in the used to other classes.
+2.	How to use Abstract classes.
+
+1.	JSON parsing in API automation.
+2.	Dynamic data fetching from UI table in Selenium
+3.	Dynamic Xpath for dynamic text changing for the element.
+4.	 Overriding example
+5.	 How do get data element value from response object of JSON Array.
+6.	Ancestors and sibling in selenium.
+7.	 
+
+
+1.	What JDK-JRE-JVM?
+2.	Is JVM platform independent? - No JVM platform dependent and java is platform independent.
+3.	How do run script from Jenkins? Pipelining 
+4.	Difference between selenium standalone server and selenium WebDriver?
+5.	How do you read huge test data? – Excel sheet and properties file need to check which one more preferable.
+6.	 Maven structure and its advantages?
+7.	TestNG structure and its advantages?
+8.	How do you used Abstract class i.e. oops feature in your project?
+9.	Explain POM and Pagefactory.initElement(driver,Page.class);?
+10.	What is WebElement?
+11.	How do you download file in selenium? Without sendKeys();?
+12.	Need to know about running script on Firefox browser? need to set ….?
+13.	Explain selenium different version in serial way? (IDE, selenium 2-RC, selenium  3-WebDriver and Grid)
+14.	Need to read perfectly concept of method overloading and method overriding.
+
+1.	How to pass text/element/locater value dynamically in Xpath?
+2.	Collections need to READ proper way HashTable?
+3.	How do you used Method overloading and method overriding in your project?
+4.	How to fetch dynamic data from table in selenium UI?
+5.	Java program printing num in square, triangle etc need to prepare?
+6.	
+
+1.	Difference between RestAssured baseUIR and RestAssured basePath
+2.	JSONPath need to note completely with respect to Response object.
+3.	Again revisit Collections all classes and interface and differences
+4.	HTTP methods other than get put post and delete like Patch and all.
+5.	
+
+Diff between verification and validation
+Diff between  severity and priority
+
+
+
 **********************
